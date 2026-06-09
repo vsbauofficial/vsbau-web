@@ -4,7 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VS Bau</title>
+input,
+select,
+textarea{
 
+width:100%;
+padding:12px;
+border-radius:8px;
+border:none;
+box-sizing:border-box;
+
+}
 <style>
 
 body{
@@ -115,7 +125,50 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 </div>
 
 </section>
+<section class="section">
 
+<h2>Zatraži ponudu</h2>
+
+<div class="card">
+
+<input type="text" placeholder="Ime i prezime">
+
+<br><br>
+
+<input type="text" placeholder="Telefon">
+
+<br><br>
+
+<input type="text" placeholder="Grad">
+
+<br><br>
+
+<label>Broj prostorija</label>
+
+<select>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+</select>
+
+<br><br>
+
+<textarea rows="5" placeholder="Opišite radove koje želite"></textarea>
+
+<br><br>
+
+<a href="#" class="btn">Pošalji upit</a>
+
+</div>
+
+</section>
 <footer>
 VS Bau © 2026
 </footer>
