@@ -143,7 +143,17 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 
 <br><br>
 <label>Vrsta radova</label>
+document.getElementById("tipRigipsa").addEventListener("change", function(){
 
+let led = document.getElementById("ledMetri");
+
+if(this.value === "led"){
+    led.style.display = "block";
+}else{
+    led.style.display = "none";
+}
+
+});
 <select id="vrstaRadova">
 <option value="">Izaberite vrstu radova</option>
 <option value="moleraj">Moleraj</option>
@@ -161,15 +171,26 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 
 <label>Tip rigips radova</label>
 
-<select>
-<option>Spušten plafon</option>
-<option>Pregradni zid</option>
-<option>Obloga zida</option>
-<option>Skrivači za LED rasvetu</option>
-<option>Revizioni otvor</option>
-<option>Kutije i dekorativni elementi</option>
-<option>Ostalo</option>
+<select id="tipRigipsa">
+<option value="">Izaberite</option>
+<option value="plafon">Spušten plafon</option>
+<option value="zid">Pregradni zid</option>
+<option value="obloga">Obloga zida</option>
+<option value="led">Skrivači za LED rasvetu</option>
+<option value="revizija">Revizioni otvor</option>
+<option value="kutije">Kutije i dekorativni elementi</option>
+<option value="ostalo">Ostalo</option>
 </select>
+
+<br><br>
+
+<div id="ledMetri" style="display:none;">
+
+<label>Ukupna dužina skrivača (m)</label>
+
+<input type="number" placeholder="Unesite dužne metre">
+
+</div>
 
 </div>
 
