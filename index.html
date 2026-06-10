@@ -145,19 +145,25 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 
 <label>Broj prostorija</label>
 
-<select>
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>4</option>
-<option>5</option>
-<option>6</option>
-<option>7</option>
-<option>8</option>
-<option>9</option>
-<option>10</option>
+<label>Broj prostorija</label>
+
+<select id="brojProstorija">
+<option value="">Izaberite</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
 </select>
 
+<br><br>
+
+<div id="prostorije"></div>
 <br><br>
 
 <textarea rows="5" placeholder="Opišite radove koje želite"></textarea>
@@ -172,6 +178,49 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 <footer>
 VS Bau © 2026
 </footer>
+<script>
 
+document.getElementById("brojProstorija").addEventListener("change", function(){
+
+let broj = parseInt(this.value);
+let container = document.getElementById("prostorije");
+
+container.innerHTML = "";
+
+for(let i = 1; i <= broj; i++){
+
+container.innerHTML += `
+
+<div class="card">
+
+<h3>Prostorija ${i}</h3>
+
+<input type="text" placeholder="Naziv prostorije">
+
+<br><br>
+
+<input type="number" placeholder="Dužina (m)">
+
+<br><br>
+
+<input type="number" placeholder="Širina (m)">
+
+<br><br>
+
+<input type="number" placeholder="Visina (m)">
+
+<br><br>
+
+<textarea placeholder="Šta želite da se radi u ovoj prostoriji?"></textarea>
+
+</div>
+
+`;
+
+}
+
+});
+
+</script>
 </body>
 </html>
