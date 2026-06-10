@@ -142,7 +142,38 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 <input type="text" placeholder="Grad">
 
 <br><br>
+<label>Vrsta radova</label>
 
+<select id="vrstaRadova">
+<option value="">Izaberite vrstu radova</option>
+<option value="moleraj">Moleraj</option>
+<option value="gletovanje">Gletovanje</option>
+<option value="rigips">Rigips</option>
+<option value="adaptacija">Adaptacija</option>
+<option value="ostalo">Ostalo</option>
+</select>
+
+<br><br>
+
+<div id="rigipsOpcije" style="display:none;">
+
+<h3>Rigips radovi</h3>
+
+<label>Tip rigips radova</label>
+
+<select>
+<option>Spušten plafon</option>
+<option>Pregradni zid</option>
+<option>Obloga zida</option>
+<option>Skrivači za LED rasvetu</option>
+<option>Revizioni otvor</option>
+<option>Kutije i dekorativni elementi</option>
+<option>Ostalo</option>
+</select>
+
+</div>
+
+<br>
 <label>Broj prostorija</label>
 
 <label>Broj prostorija</label>
@@ -179,7 +210,17 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 VS Bau © 2026
 </footer>
 <script>
+document.getElementById("vrstaRadova").addEventListener("change", function(){
 
+let rigips = document.getElementById("rigipsOpcije");
+
+if(this.value === "rigips"){
+    rigips.style.display = "block";
+}else{
+    rigips.style.display = "none";
+}
+
+});
 document.getElementById("brojProstorija").addEventListener("change", function(){
 
 let broj = parseInt(this.value);
