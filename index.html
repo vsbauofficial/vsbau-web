@@ -150,14 +150,44 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 <br><br>
 <label>Vrsta radova</label>
 
-<select id="vrstaRadova">
-<option value="">Izaberite vrstu radova</option>
-<option value="moleraj">Moleraj</option>
-<option value="gletovanje">Gletovanje</option>
-<option value="rigips">Rigips</option>
-<option value="adaptacija">Adaptacija</option>
-<option value="ostalo">Ostalo</option>
-</select>
+<label>Vrsta radova</label>
+
+<div class="card">
+
+<label>
+<input type="checkbox" class="radovi" value="moleraj">
+ Moleraj
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox" class="radovi" value="gletovanje">
+ Gletovanje
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox" id="rigipsCheck">
+ Rigips
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox" class="radovi" value="adaptacija">
+ Adaptacija
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox" class="radovi" value="ostalo">
+ Ostalo
+</label>
+
+</div>
 
 <br><br>
 
@@ -228,15 +258,17 @@ VS Bau © 2026
 </footer>
 <script>
 
-document.getElementById("vrstaRadova").addEventListener("change", function(){
+document.getElementById("rigipsCheck").addEventListener("change", function(){
 
 let rigips = document.getElementById("rigipsOpcije");
 
-if(this.value === "rigips"){
+if(this.checked){
 rigips.style.display = "block";
 }else{
 rigips.style.display = "none";
 }
+
+});
 
 });
 
