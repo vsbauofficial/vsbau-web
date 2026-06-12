@@ -334,7 +334,28 @@ Kvadratura: 0 m²
 
 
 });
+document.addEventListener("input", function(e){
 
+if(
+e.target.classList.contains("duzina") ||
+e.target.classList.contains("sirina")
+){
+
+let kartica = e.target.closest(".card");
+
+let duzina = parseFloat(kartica.querySelector(".duzina").value) || 0;
+let sirina = parseFloat(kartica.querySelector(".sirina").value) || 0;
+
+let kvadratura = duzina * sirina;
+
+kartica.querySelector(".kvadratura").value = kvadratura.toFixed(2);
+
+kartica.querySelector(".rezultat").innerHTML =
+"Kvadratura: " + kvadratura.toFixed(2) + " m²";
+
+}
+
+});
 </script>
 
 </body>
