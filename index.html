@@ -221,7 +221,77 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 <footer>
 VS Bau © 2026
 </footer>
+<script>
 
+document.getElementById("vrstaRadova").addEventListener("change", function(){
+
+let rigips = document.getElementById("rigipsOpcije");
+
+if(this.value === "rigips"){
+rigips.style.display = "block";
+}else{
+rigips.style.display = "none";
+}
+
+});
+
+document.getElementById("tipRigipsa").addEventListener("change", function(){
+
+let led = document.getElementById("ledMetri");
+
+if(this.value === "led"){
+led.style.display = "block";
+}else{
+led.style.display = "none";
+}
+
+});
+
+document.getElementById("brojProstorija").addEventListener("change", function(){
+
+let broj = parseInt(this.value);
+let container = document.getElementById("prostorije");
+
+container.innerHTML = "";
+
+for(let i = 1; i <= broj; i++){
+
+container.innerHTML += `
+
+<div class="card">
+
+<h3>Prostorija ${i}</h3>
+
+<input type="text" placeholder="Naziv prostorije">
+
+<br><br>
+
+<input type="number" placeholder="Dužina (m)">
+
+<br><br>
+
+<input type="number" placeholder="Širina (m)">
+
+<br><br>
+
+<input type="number" placeholder="Visina (m)">
+
+<br><br>
+
+<textarea placeholder="Šta želite da se radi u ovoj prostoriji?"></textarea>
+
+</div>
+
+`;
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
 
 
 </body>
