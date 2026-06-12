@@ -152,6 +152,237 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 
 <br><br>
 <label>Vrsta radova</label>
+
+<select id="vrstaRadova">
+<option value="">Izaberite vrstu radova</option>
+<option value="moleraj">Moleraj</option>
+<option value="gletovanje">Gletovanje</option>
+<option value="rigips">Rigips</option>
+<option value="adaptacija">Adaptacija</option>
+<option value="ostalo">Ostalo</option>
+</select>
+
+<br><br>
+
+<div id="rigipsOpcije" style="display:none;">
+
+<h3>Rigips radovi</h3>
+
+<label>Tip rigips radova</label>
+
+<select id="tipRigipsa">
+<option value="">Izaberite</option>
+<option value="plafon">Spušten plafon</option>
+<option value="zid">Pregradni zid</option>
+<option value="obloga">Obloga zida</option>
+<option value="led">Skrivači za LED rasvetu</option>
+<option value="revizija">Revizioni otvor</option>
+<option value="kutije">Kutije i dekorativni elementi</option>
+<option value="ostalo">Ostalo</option>
+</select>
+
+<br><br>
+
+<div id="ledMetri" style="display:none;">
+
+<label>Ukupna dužina skrivača (m)</label>
+
+<input type="number" placeholder="Unesite dužne metre">
+
+</div>
+
+</div>
+
+<br>
+
+
+<label>Broj prostorija</label>
+
+<select id="brojProstorija">
+<option value="">Izaberite</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+
+<br><br>
+
+<div id="prostorije"></div>
+<br><br>
+
+<textarea rows="5" placeholder="Opišite radove koje želite"></textarea>
+
+<br><br>
+
+<a href="#" class="btn">Pošalji upit</a>
+
+</div>
+
+</section>
+<footer>
+VS Bau © 2026
+</footer>
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VS Bau</title>
+
+
+}
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#111;
+color:white;
+}
+
+header{
+background:black;
+padding:40px 20px;
+text-align:center;
+border-bottom:3px solid gold;
+}
+
+h1{
+font-size:48px;
+color:gold;
+margin:0;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 30px;
+background:gold;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+}
+
+.section{
+padding:50px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:#1e1e1e;
+padding:25px;
+margin-bottom:20px;
+border-radius:12px;
+}
+input,
+select,
+textarea{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:none;
+box-sizing:border-box;
+}
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #333;
+margin-top:40px;
+}
+.rezultat{
+background:#222;
+padding:20px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+margin-top:20px;
+color:gold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>VS Bau</h1>
+<p>Završni radovi u građevini</p>
+</header>
+
+<section class="hero">
+<h2>Profesionalni završni radovi</h2>
+
+<p>
+Moleraj, gletovanje, farbanje, rigips sistemi i adaptacije.
+Pošaljite upit i dobićete ponudu brzo i jednostavno.
+</p>
+
+<a href="#" class="btn">Pošalji upit</a>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+<h3>Moleraj</h3>
+<p>Kompletni molerski radovi za stanove, kuće i poslovne prostore.</p>
+</div>
+
+<div class="card">
+<h3>Gletovanje</h3>
+<p>Priprema zidova i plafona za vrhunski završni izgled.</p>
+</div>
+
+<div class="card">
+<h3>Rigips</h3>
+<p>Spušteni plafoni, pregradni zidovi i dekorativna rešenja.</p>
+</div>
+
+</section>
+<section class="section">
+
+<h2>Zatraži ponudu</h2>
+
+<div class="card">
+
+<input type="text" placeholder="Ime i prezime">
+
+<br><br>
+
+<input type="text" placeholder="Telefon">
+
+<br><br>
+
+<input type="text" placeholder="Grad">
+
+<br><br>
+<label>Vrsta radova</label>
 document.getElementById("tipRigipsa").addEventListener("change", function(){
 
 let led = document.getElementById("ledMetri");
