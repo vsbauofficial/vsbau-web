@@ -221,9 +221,19 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
 <div id="rigipsOpcije" style="display:none;">
 
 <label>
+<label>
 <input type="checkbox" id="plafonCheck">
  Spušten plafon
 </label>
+
+<div id="plafonOpcije" style="display:none;">
+
+<br>
+
+<label>Kvadratura plafona (m²)</label>
+<input type="number" placeholder="Unesite m²">
+
+</div>
 
 <br><br>
 
@@ -232,12 +242,30 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
  Pregradni zid
 </label>
 
+<div id="zidOpcije" style="display:none;">
+
+<br>
+
+<label>Kvadratura zida (m²)</label>
+<input type="number" placeholder="Unesite m²">
+
+</div>
+
 <br><br>
 
 <label>
 <input type="checkbox" id="oblogaCheck">
  Obloga zida
 </label>
+
+<div id="oblogaOpcije" style="display:none;">
+
+<br>
+
+<label>Kvadratura obloge (m²)</label>
+<input type="number" placeholder="Unesite m²">
+
+</div>
 
 <br><br>
 
@@ -246,6 +274,15 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
  Skrivači za LED rasvetu
 </label>
 
+<div id="ledMetri" style="display:none;">
+
+<br>
+
+<label>Dužni metri LED skrivača</label>
+<input type="number" placeholder="Unesite metre">
+
+</div>
+
 <br><br>
 
 <label>
@@ -253,17 +290,14 @@ Pošaljite upit i dobićete ponudu brzo i jednostavno.
  Revizioni otvor
 </label>
 
-<br><br>
+<div id="revizijaOpcije" style="display:none;">
 
-<label>
-<input type="checkbox" id="kutijeCheck">
- Kutije i dekorativni elementi
-</label>
-</select>
+<br>
 
-<br><br>
+<label>Broj revizionih otvora</label>
+<input type="number" placeholder="Komada">
 
-<div id="ledMetri" style="display:none;">
+</div>
 
 <label>Ukupna dužina skrivača (m)</label>
 
