@@ -345,9 +345,12 @@ let kartica = e.target.closest(".card");
 
 let duzina = parseFloat(kartica.querySelector(".duzina").value) || 0;
 let sirina = parseFloat(kartica.querySelector(".sirina").value) || 0;
+let visina = parseFloat(kartica.querySelector(".visina").value) || 0;
 
-let kvadratura = duzina * sirina;
+let plafon = duzina * sirina;
+let zidovi = 2 * (duzina + sirina) * visina;
 
+let kvadratura = plafon + zidovi;
 kartica.querySelector(".kvadratura").value = kvadratura.toFixed(2);
 
 kartica.querySelector(".rezultat").innerHTML =
