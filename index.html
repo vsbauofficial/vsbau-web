@@ -388,6 +388,28 @@ kartica.querySelector(".rezultat").innerHTML =
 
 }
 
+});document.getElementById("adaptacijaCheck").addEventListener("change", function(){
+
+let adaptacija = document.getElementById("adaptacijaOpcije");
+
+if(this.checked){
+adaptacija.style.display = "block";
+}else{
+adaptacija.style.display = "none";
+}
+
+});
+
+document.getElementById("spaletneCheck").addEventListener("change", function(){
+
+let metri = document.getElementById("spaletneMetri");
+
+if(this.checked){
+metri.style.display = "block";
+}else{
+metri.style.display = "none";
+}
+
 });
 </script>
 
