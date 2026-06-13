@@ -348,7 +348,19 @@ let sirina = parseFloat(kartica.querySelector(".sirina").value) || 0;
 let visina = parseFloat(kartica.querySelector(".visina").value) || 0;
 
 let plafon = duzina * sirina;
-let zidovi = 2 * (duzina + sirina) * vis
+let zidovi = 2 * (duzina + sirina) * visina;
+
+let kvadratura = plafon + zidovi;
+
+kartica.querySelector(".kvadratura").value =
+kvadratura.toFixed(2);
+
+kartica.querySelector(".rezultat").innerHTML =
+"Kvadratura: " + kvadratura.toFixed(2) + " m²";
+
+}
+
+});
 </script>
 
 </body>
