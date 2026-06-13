@@ -469,7 +469,30 @@ metri.style.display = "block";
 }else{
 metri.style.display = "none";
 }
+document.getElementById("plafonCheck").addEventListener("change", function(){
+document.getElementById("plafonOpcije").style.display =
+this.checked ? "block" : "none";
+});
 
+document.getElementById("zidCheck").addEventListener("change", function(){
+document.getElementById("zidOpcije").style.display =
+this.checked ? "block" : "none";
+});
+
+document.getElementById("oblogaCheck").addEventListener("change", function(){
+document.getElementById("oblogaOpcije").style.display =
+this.checked ? "block" : "none";
+});
+
+document.getElementById("ledCheck").addEventListener("change", function(){
+document.getElementById("ledMetri").style.display =
+this.checked ? "block" : "none";
+});
+
+document.getElementById("revizijaCheck").addEventListener("change", function(){
+document.getElementById("revizijaOpcije").style.display =
+this.checked ? "block" : "none";
+});
 });
 </script>
 
