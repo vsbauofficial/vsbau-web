@@ -338,9 +338,9 @@ document.addEventListener("input", function(e){
 
 if(
 e.target.classList.contains("duzina") ||
-e.target.classList.contains("sirina")
-){
-
+e.target.classList.contains("sirina") ||
+e.target.classList.contains("visina")
+)
 let kartica = e.target.closest(".card");
 
 let duzina = parseFloat(kartica.querySelector(".duzina").value) || 0;
